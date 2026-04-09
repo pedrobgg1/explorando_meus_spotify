@@ -3,7 +3,7 @@
 import pandas as pd
 
 df = pd.read_csv("TabelaMusicas.csv", sep=',', low_memory=False)
-#%%
+
 df_musicas = df
 
 def validar_mes(mes):
