@@ -42,7 +42,7 @@ AnoFinal = 2023
 
 AnoInicial = 2022
 
-AnoFinal = 0
+AnoFinal = 
 
 MesInicial = 3
 
