@@ -21,27 +21,21 @@ def validar_ano_final(anoInicio, anoFinal):
     
 def MusicasPeriodoAno():
     try:
-
         anoInicio = int(input("Insira o ano inicial desejado: "))
         anoFinal = input("Insira o ano final desejado: ").strip()
 
         if not anoFinal:
-
             mesInicio = validar_mes(int(input("Insira o primeiro mês desejado: ")))
             mesFinal = validar_mes(int(input("Insira o ultimo mês desejado: ")))
-
             validar_mes_final(mesInicio,mesFinal)
-        
             df_filtro = (df_musicas[(df_musicas["ano"]==anoInicio) & 
             (df_musicas["mes"].between(mesInicio,mesFinal))])
-
             print(f"Músicas ouvidas em {anoInicio}, do mês {mesInicio}, até o mês {mesFinal}")
 
         else:
             anoFinal = int(anoFinal)
             validar_ano_final(anoInicio,anoFinal)
             df_filtro = (df_musicas[(df_musicas["ano"].between(anoInicio,anoFinal))])
-
             print(f"Músicas ouvidas entre {anoInicio} e {anoFinal}")
 
     except ValueError as e:
@@ -59,7 +53,6 @@ def MusicasPeriodoAno():
                             .sort_values(by="minutos_ouvidos",ascending=False))
     df_final["minutos_ouvidos"] = round(df_final["minutos_ouvidos"],2)
     df_final["horas_ouvidas"] = round((df_final["minutos_ouvidos"]/60),2)
-
     df_final = df_final.reset_index(drop=True)
     df_final.index = df_final.index + 1  
 
