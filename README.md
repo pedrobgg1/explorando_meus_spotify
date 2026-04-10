@@ -51,7 +51,6 @@ MesFinal = 7
 **Resultado** = Músicas ouvidas entre 03/2022 e 07/2022
 
 
-
 ## Observações
 O projeto utiliza dados reais exportados do Spotify.
 É uma forma prática de treinar:
